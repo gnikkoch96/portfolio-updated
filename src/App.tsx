@@ -1,10 +1,11 @@
 import Background from "./components/Background";
+import Home from "./sections/Home"
 
 function App() {
   return (
     <main className="min-h-screen text-white">
-      <h1 className="text-4xl font-bold text-blue-400">Portfolio</h1>
       <Background/>
+      <Home/>
     </main>
   );
 }

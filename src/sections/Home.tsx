@@ -1,14 +1,14 @@
 export default function Home() {
   return (
-    <section id="home" className="flex flex-col justify-end min-h-dvh px-6 pb-24">
-      <p>HI I'M</p>
-      <h1>NIKKO CHAN</h1>
-      <p>Full-Stack Developer (Frontend Focused)</p>
-      <p>
+    <section id="home" className="flex flex-col gap-2 justify-end min-h-dvh px-6 pb-24">
+      <p className="text-muted">Hi, I'm</p>
+      <h1 className="font-bold text-4xl">Nikko Chan</h1>
+      <p className="font-bold text-accent text-lg">Full-Stack Developer (Frontend Focused)</p>
+      <p className='text-muted'>
         I'm a fullstack software engineer with 3+ years of experience building
         production web applications, including AI-powered educational platforms.
       </p>
-      <a href="#experience">View Professional Experience</a>
+      <a className="bg-accent rounded w-fit px-5 py-3 text-background" href="#experience">View Experience</a>
     </section>
   );
 }

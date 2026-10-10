@@ -9,3 +9,8 @@
   --color-background: #080d1a;
   --font-sans: "Inter", sans-serif;
 }
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}

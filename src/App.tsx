@@ -1,11 +1,15 @@
 import Background from "./components/Background";
-import Home from "./sections/Home"
+import Header from "./components/Header";
+import Home from "./sections/Home";
 
 function App() {
   return (
     <main className="min-h-screen text-white">
-      <Background/>
-      <Home/>
+      <Background />
+      <div className="px-6">
+        <Header />
+        <Home />
+      </div>
     </main>
   );
 }

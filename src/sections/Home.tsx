@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section id="home" className="flex flex-col gap-2 justify-end min-h-dvh px-6 pb-24">
+    <section id="home" className="flex flex-col gap-2 justify-end min-h-dvh pb-24">
       <p className="text-muted">Hi, I'm</p>
       <h1 className="font-bold text-4xl">Nikko Chan</h1>
       <p className="font-bold text-accent text-lg">Full-Stack Developer (Frontend Focused)</p>

@@ -10,9 +10,8 @@ function App() {
       <div className="px-6">
         <Header />
         <Home />
-        <Navigation/>
       </div>
-
+      <Navigation />
     </main>
   );
 }

@@ -7,10 +7,12 @@ function App() {
   return (
     <main className="min-h-screen text-white">
       <Background />
+      <Header />
+      
       <div className="px-6">
-        <Header />
         <Home />
       </div>
+      
       <Navigation />
     </main>
   );

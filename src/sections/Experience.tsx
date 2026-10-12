@@ -32,7 +32,7 @@ const experiences = [
   {
     company: "Westlake Financial",
     role: "Software Engineer Intern",
-    location: "Los Angles, CA",
+    location: "Los Angeles, CA",
     location_icon: MapPin,
     start_date: "06/2022",
     end_date: "09/2022",
@@ -40,7 +40,7 @@ const experiences = [
       "Developed backend ETL processes using Spring Batch to automate the aggregation of client account and financial delinquency data from MySQL databases into automated internal reports.",
       "Participated in daily Agile workflows to optimize complex SQL reporting queries, enhancing data processing efficiency for enterprise risk analysis and partner distribution workflows",
     ],
-    techs: ["Java", "Spring", "PL/SQL", "Oracle SQL Develope"],
+    techs: ["Java", "Spring", "PL/SQL", "Oracle SQL Developer"],
   },
 ];
 
@@ -122,17 +122,16 @@ export default function Experience() {
               </div>
             ),
           )}
-
-        {visibleCount < experiences.length ? (
-          <button onClick={() => setVisibleCount((prev) => prev + 1)}>
-            View More
-          </button>
-        ) : (
-          experiences.length > 1 && (
-            <button onClick={() => setVisibleCount(1)}>Show Less</button>
-          )
-        )}
       </div>
+      {visibleCount < experiences.length ? (
+        <button onClick={() => setVisibleCount((prev) => prev + 1)}>
+          View More
+        </button>
+      ) : (
+        experiences.length > 1 && (
+          <button onClick={() => setVisibleCount(1)}>Show Less</button>
+        )
+      )}
     </section>
   );
 }

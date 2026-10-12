@@ -9,12 +9,12 @@ function App() {
     <main className="min-h-screen text-white">
       <Background />
       <Header />
-      
-      <div className="px-6">
+
+      <div>
         <Home />
-        <Experience/>
+        <Experience />
       </div>
-      
+
       <Navigation />
     </main>
   );

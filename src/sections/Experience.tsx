@@ -1,4 +1,5 @@
 import { MapPin, Monitor } from "lucide-react";
+import { useState } from "react";
 
 const experiences = [
   {
@@ -44,6 +45,8 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const [visibleCount, setVisibleCount] = useState<number>(1);
+
   return (
     <section
       id="experience"
@@ -57,12 +60,13 @@ export default function Experience() {
         </p>
       </div>
 
-      <div className="relative flex flex-col gap-5">
-        {/* timeline line */}
-        <div className="absolute top-2 bottom-2 left-0 w-0.5 bg-accent z-10" />
-        
-        {/* experience */}
-        {experiences.map(
+      {/* timeline line */}
+      <div className="absolute top-2 bottom-2 left-0 w-0.5 bg-accent z-10" />
+
+      {/* experience */}
+      {experiences
+        .slice(0, visibleCount)
+        .map(
           ({
             company,
             role,
@@ -117,7 +121,16 @@ export default function Experience() {
             </div>
           ),
         )}
-      </div>
+
+      {visibleCount < experiences.length ? (
+        <button onClick={() => setVisibleCount((prev) => prev + 1)}>
+          View More
+        </button>
+      ) : (
+        experiences.length > 1 && (
+          <button onClick={() => setVisibleCount(1)}>Show Less</button>
+        )
+      )}
     </section>
   );
 }

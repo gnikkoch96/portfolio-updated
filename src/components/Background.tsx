@@ -9,7 +9,8 @@ export default function Background() {
           className="h-full w-full object-cover"
         />
       </picture>
-      <div className="absolute inset-0 bg-black/30"></div>
+      
+      {/* <div className="absolute inset-0 bg-black/30"></div> */}
     </div>
   );
 }

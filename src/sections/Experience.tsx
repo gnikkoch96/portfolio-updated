@@ -1,5 +1,7 @@
 import { MapPin, Monitor } from "lucide-react";
 import { useState } from "react";
+import SectionHeader from "../components/sections/SectionHeader";
+import TechPill from "../components/TechPill";
 
 const experiences = [
   {
@@ -48,17 +50,12 @@ export default function Experience() {
   const [visibleCount, setVisibleCount] = useState<number>(1);
 
   return (
-    <section
-      id="experience"
-      className="flex flex-col gap-6 pt-15 pb-24 px-6 min-h-dvh snap-start bg-background/90"
-    >
+    <section id="experience" className="content-section">
       {/* experience header */}
-      <div>
-        <h2 className="text-3xl font-bold text-accent">Experience</h2>
-        <p className="text-muted">
-          My professional journey and key contributions
-        </p>
-      </div>
+      <SectionHeader
+        sectionTitle="Experience"
+        sectionSubtext="My professional journey and key contributions"
+      />
 
       <div className="relative flex flex-col gap-5">
         {/* timeline line */}
@@ -110,12 +107,7 @@ export default function Experience() {
                   {/* tech */}
                   <div className="flex gap-1 flex-wrap -ml-5">
                     {techs.map((tech) => (
-                      <span
-                        key={tech}
-                        className="border border-muted/30 rounded-full px-2 text-sm shadow "
-                      >
-                        {tech}
-                      </span>
+                      <TechPill key={tech} tech={tech}/>
                     ))}
                   </div>
                 </div>

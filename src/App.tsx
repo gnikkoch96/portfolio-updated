@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Experience from "./sections/Experience";
 import Home from "./sections/Home";
+import Projects from "./sections/projects/Projects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div>
         <Home />
         <Experience />
+        <Projects />
       </div>
 
       <Navigation />

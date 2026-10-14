@@ -4,9 +4,11 @@ export default function Home() {
       id="home"
       className="relative flex flex-col gap-2 justify-end min-h-dvh px-6 pb-24 snap-start"
     >
+
+      {/* start transition to transparent dark overlay */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-50% to-background/90"
+        className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-30% to-background/90"
       />
 
       <div className="relative z-10 flex flex-col gap-2">

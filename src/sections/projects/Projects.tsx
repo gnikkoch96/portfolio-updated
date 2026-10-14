@@ -6,7 +6,7 @@ import githubIcon from "../../assets/icons/github.svg";
 import type { Project } from "../../types/project";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "../../components/sections/SectionHeader";
-import { ArrowRight, SquareArrowOutUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const projects: Project[] = [
   {

@@ -4,7 +4,7 @@ export default function Background() {
       <picture>
         <source media="(min-width: 1024px)" srcSet="/images/background.png"/>
         <img
-          src="/images/mobile-background.png"
+          src="/images/mobile-background.webp"
           alt="guy coding in the dark with cozy background"
           className="h-full w-full object-cover"
         />

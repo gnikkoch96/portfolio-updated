@@ -2,7 +2,7 @@ export default function Background() {
   return (
     <div className="fixed inset-0 z-[-1]">
       <picture>
-        <source media="(min-width: 1024px)" srcSet="/images/background.png"/>
+        <source media="(min-width: 1024px)" srcSet="/images/background.webp"/>
         <img
           src="/images/mobile-background.webp"
           alt="guy coding in the dark with cozy background"

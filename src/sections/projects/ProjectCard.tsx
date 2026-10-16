@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="border border-muted/30 p-3 rounded-xl flex flex-col gap-5">
       {/* image */}
-      <div className="border rounded-2xl border-muted/10 max-h-50 overflow-hidden">
+      <div className="aspect-2/1 w-full border rounded-2xl border-muted/10 bg-surface/60 overflow-hidden">
         <img className="h-full w-full object-contain" src={project.pic} alt={project.pic_alt} loading="lazy" />
       </div>
 

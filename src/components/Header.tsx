@@ -1,6 +1,9 @@
-import { Volume2 } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
+import useRainAudio from "../hooks/useRainAudio";
 
 export default function Header() {
+  const { isPlaying, toggleAudio } = useRainAudio();
+
   return (
     <header className="fixed flex justify-end items-center w-full z-50 top-0 left-0 p-3">
       {/* Extended gradient */}
@@ -14,8 +17,13 @@ export default function Header() {
         type="button"
         aria-label="volume-toggle"
         className="bg-surface/70 rounded-full border border-foreground/30 p-2 z-10"
+        onClick={toggleAudio}
       >
-        <Volume2 strokeWidth={1.5} size={20} />
+        {isPlaying ? (
+          <Volume2 strokeWidth={1.5} size={20} />
+        ) : (
+          <VolumeX strokeWidth={1.5} size={20} />
+        )}
       </button>
     </header>
   );

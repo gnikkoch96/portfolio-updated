@@ -15,6 +15,43 @@ html {
   scroll-behavior: smooth;
 }
 
+.rain-window {
+  position: absolute;
+  top: 2%;
+  height: 50%;
+  pointer-events: none;
+}
+
+.rain-window-left {
+  left: 0;
+  width: 15%;
+}
+
+.rain-window-right {
+  left: 25%;
+  width: 40%;
+}
+
+.rain-drop {
+  position: absolute;
+  top: 10%;
+  width: 2px;
+  height: 20px;
+  background: rgba(54, 101, 181, 0.7);
+  border-radius: 999px;
+  animation: slide-down 1s linear infinite;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(500px);
+  }
+}
+
 @utility content-section {
-  @apply flex flex-col gap-6 pt-15 pb-24 px-6 min-h-dvh snap-start bg-background/90
+  @apply flex flex-col gap-6 pt-15 pb-24 px-6 min-h-dvh snap-start bg-background/90;
 }

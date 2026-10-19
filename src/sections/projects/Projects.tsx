@@ -74,7 +74,7 @@ export default function Projects() {
           className="h-5.5 bg-white rounded-full"
           src={githubIcon}
           alt="Github Icon"
-        />{" "}
+        />
         Explore More on Github <ArrowRight size={20} />
       </a>
     </section>

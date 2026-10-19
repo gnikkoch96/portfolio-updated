@@ -2,11 +2,11 @@ export default function Background() {
   return (
     <div className="fixed inset-0 z-[-1]">
       <picture>
-        <source media="(min-width: 1024px)" srcSet="/images/background.webp" />
+        <source media="(min-width: 1280px)" srcSet="/images/background.webp" />
         <img
           src="/images/mobile-background.webp"
           alt="guy coding in the dark with cozy background"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover  xl:object-left"
         />
       </picture>
 
@@ -40,11 +40,11 @@ export default function Background() {
 
       {/* foreground of person coding */}
       <picture>
-        <source media="(min-width: 1024px)" srcSet="/images/background-foreground.webp" />
+        <source media="(min-width: 1280px)" srcSet="/images/background-foreground.webp" />
         <img
           src="/images/mobile-background-foreground.webp"
           alt="guy coding in the dark without background"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover  xl:object-left"
         />
       </picture>
     </div>

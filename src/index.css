@@ -23,7 +23,7 @@ html {
 }
 
 .rain-window-left {
-  left: 0;
+  left:5%;
   width: 15%;
 }
 
@@ -34,12 +34,12 @@ html {
 
 .rain-drop {
   position: absolute;
-  top: 10%;
-  width: 2px;
-  height: 20px;
+  top: 0%;
+  width: clamp(2px, 0.3vw, 10px);
+  height: clamp(20px, 3vh, 35px);
   background: rgba(54, 101, 181, 0.7);
   border-radius: 999px;
-  animation: slide-down 1s linear infinite;
+  animation: slide-down 0.5s linear infinite;
 }
 
 @keyframes slide-down {
@@ -48,7 +48,7 @@ html {
   }
 
   to {
-    transform: translateY(500px);
+    transform: translateY(100dvh);
   }
 }
 

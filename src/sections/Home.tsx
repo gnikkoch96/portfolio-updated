@@ -24,16 +24,20 @@ export default function Home() {
       />
 
       <div className="relative z-10 container-content-section">
-        <p className="text-muted lg:text-xl xl:text-2xl">Hi, I'm</p>
-        <h1 className="font-bold text-4xl lg:text-5xl xl:text-6xl">Nikko Chan</h1>
-        <p className="font-bold text-accent text-lg lg:text-2xl xl:text-3xl">
-          Full-Stack Developer (Frontend Focused)
-        </p>
-        <p className="text-muted max-w-2xl lg:text-xl xl:text-2xl">
-          I'm a fullstack software engineer with 3+ years of experience building
-          production web applications, including AI-powered educational
-          platforms.
-        </p>
+        <div className="flex flex-col gap-1 xl:gap-3">
+          <p className="text-muted lg:text-xl xl:text-2xl">Hi, I'm</p>
+          <h1 className="font-bold text-4xl lg:text-5xl xl:text-6xl">
+            Nikko Chan
+          </h1>
+          <p className="font-bold text-accent text-lg lg:text-2xl xl:text-3xl">
+            Full-Stack Developer (Frontend Focused)
+          </p>
+          <p className="text-muted max-w-2xl lg:text-xl xl:text-2xl">
+            I'm a fullstack software engineer with 3+ years of experience
+            building production web applications, including AI-powered
+            educational platforms.
+          </p>
+        </div>
 
         {/* socials */}
         <div className="flex gap-2">

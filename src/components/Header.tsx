@@ -19,7 +19,7 @@ export default function Header() {
       <button
         type="button"
         aria-label="volume-toggle"
-        className="bg-surface/70 rounded-full border border-foreground/30 p-2 z-10"
+        className="bg-surface/70 rounded-full border border-foreground/30 p-2 z-10 text-muted hover:cursor-pointer hover:text-foreground"
         onClick={toggleAudio}
       >
         {isPlaying ? (

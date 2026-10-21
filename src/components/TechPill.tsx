@@ -1,11 +1,12 @@
 type TechPillProps = {
     tech: string;
+    className?: string;
 }
 
-export default function TechPill({ tech } : TechPillProps) {
+export default function TechPill({ tech, className = '' } : TechPillProps) {
   return (
     <span
-      className="border border-muted/30 rounded-full px-2 text-sm shadow lg:text-lg"
+      className={`border border-muted/30 rounded-full px-2 text-sm shadow ${className}`}
     >
       {tech}
     </span>

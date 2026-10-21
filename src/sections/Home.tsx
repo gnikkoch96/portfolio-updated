@@ -23,7 +23,7 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-25% to-background/90"
       />
 
-      <div className="relative z-10 flex flex-col gap-2 w-full max-w-7xl mx-auto">
+      <div className="relative z-10 container-content-section">
         <p className="text-muted lg:text-xl xl:text-2xl">Hi, I'm</p>
         <h1 className="font-bold text-4xl lg:text-5xl xl:text-6xl">Nikko Chan</h1>
         <p className="font-bold text-accent text-lg lg:text-2xl xl:text-3xl">

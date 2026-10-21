@@ -126,7 +126,7 @@ export default function Experience() {
             )}
         </div>
         {visibleCount < experiences.length ? (
-          <button onClick={() => setVisibleCount((prev) => prev + 1)}>
+          <button className="lg:text-xl" onClick={() => setVisibleCount((prev) => prev + 1)}>
             View More
           </button>
         ) : (

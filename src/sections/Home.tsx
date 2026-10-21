@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative flex flex-col gap-2 justify-end min-h-dvh px-6 pb-26 snap-start"
+      className="relative flex flex-col gap-2 justify-end min-h-dvh px-6 pb-26 snap-start lg:pb-15"
     >
       {/* start transition to transparent dark overlay */}
       <div
@@ -23,13 +23,13 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent from-25% to-background/90"
       />
 
-      <div className="relative z-10 flex flex-col gap-2">
-        <p className="text-muted">Hi, I'm</p>
-        <h1 className="font-bold text-4xl">Nikko Chan</h1>
-        <p className="font-bold text-accent text-lg">
+      <div className="relative z-10 flex flex-col gap-2 w-full max-w-7xl mx-auto">
+        <p className="text-muted lg:text-xl xl:text-2xl">Hi, I'm</p>
+        <h1 className="font-bold text-4xl lg:text-5xl xl:text-6xl">Nikko Chan</h1>
+        <p className="font-bold text-accent text-lg lg:text-2xl xl:text-3xl">
           Full-Stack Developer (Frontend Focused)
         </p>
-        <p className="text-muted">
+        <p className="text-muted max-w-2xl lg:text-xl xl:text-2xl">
           I'm a fullstack software engineer with 3+ years of experience building
           production web applications, including AI-powered educational
           platforms.
@@ -37,8 +37,16 @@ export default function Home() {
 
         {/* socials */}
         <div className="flex gap-2">
-          {socials.map(({name, icon: Icon, link}) => (
-            <a aria-label={name} key={name} target="_blank" href={link} className="border border-muted/30 rounded-xl p-2 bg-surface"><Icon size={30}/></a>
+          {socials.map(({ name, icon: Icon, link }) => (
+            <a
+              aria-label={name}
+              key={name}
+              target="_blank"
+              href={link}
+              className="border border-muted/30 rounded-xl p-2 bg-surface"
+            >
+              <Icon size={30} />
+            </a>
           ))}
         </div>
 

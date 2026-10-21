@@ -23,31 +23,31 @@ const aboutMeText = `I'm a software developer who enjoys turning ideas into some
 export default function About() {
   return (
     <section id="about" className="content-section">
-      <SectionHeader sectionTitle="About" sectionSubtext="" />
+      <div className="container-content-section">
+        <SectionHeader sectionTitle="About" sectionSubtext="" />
+        <p className="text-muted whitespace-pre-line lg:text-xl">{aboutMeText}</p>
 
-      <p className="text-muted whitespace-pre-line">{aboutMeText}</p>
-
-      {/* what I enjoy */}
-      <h3 className="text-2xl font-bold text-muted">Other Hobbies</h3>
-      <div className="flex flex-wrap gap-2">
-        {hobbies.map(({ name, icon: Icon }) => (
-          <span
-            key={name}
-            className="flex gap-2 border border-muted/30  bg-background p-2 rounded-2xl text-sm"
-          >
-            <Icon className="text-accent" /> {name}
-          </span>
-        ))}
-      </div>
-
-      {/* profile image */}
-      <div className="flex justify-center">
-        <img
-          src={profileImage}
-          alt="profile image"
-          loading="lazy"
-          className="size-30 rounded-full border border-muted/30"
-        />
+        {/* what I enjoy */}
+        <h3 className="text-2xl font-bold text-muted lg:text-3xl">Other Hobbies</h3>
+        <div className="flex flex-wrap gap-2">
+          {hobbies.map(({ name, icon: Icon }) => (
+            <span
+              key={name}
+              className="flex gap-2 border border-muted/30  bg-background p-2 rounded-2xl text-sm lg:text-lg"
+            >
+              <Icon className="text-accent" /> {name}
+            </span>
+          ))}
+        </div>
+        {/* profile image */}
+        <div className="flex justify-center">
+          <img
+            src={profileImage}
+            alt="profile image"
+            loading="lazy"
+            className="size-30 rounded-full border border-muted/30 lg:size-50"
+          />
+        </div>
       </div>
     </section>
   );

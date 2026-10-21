@@ -40,7 +40,10 @@ export default function Background() {
 
       {/* foreground of person coding */}
       <picture>
-        <source media="(min-width: 1280px)" srcSet="/images/background-foreground.webp" />
+        <source
+          media="(min-width: 1280px)"
+          srcSet="/images/background-foreground.webp"
+        />
         <img
           src="/images/mobile-background-foreground.webp"
           alt="guy coding in the dark without background"

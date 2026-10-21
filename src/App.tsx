@@ -1,6 +1,6 @@
 import Background from "./components/Background";
 import Header from "./components/Header";
-import Navigation from "./components/Navigation";
+import {MobileNavigation} from "./components/Navigation";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Home from "./sections/Home";
@@ -19,7 +19,7 @@ function App() {
         <About/>
       </div>
 
-      <Navigation />
+      <MobileNavigation />
     </main>
   );
 }

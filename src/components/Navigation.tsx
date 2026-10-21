@@ -1,4 +1,5 @@
 import { Briefcase, FolderOpen, Home, User } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Home", href: "#home", icon: Home },
@@ -7,11 +8,53 @@ const navItems = [
   { label: "About", href: "#about", icon: User },
 ];
 
-export default function Navigation() {
+export function DesktopNavigation() {
+  const [activeSection, setActiveSection] = useState<String>("home");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -60% 0px" },
+    );
+
+    document.querySelectorAll("section[id]").forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
       aria-label="main navigation"
-      className="fixed bottom-3 inset-x-0 mx-6 px-2 py-3 flex rounded-3xl justify-around z-50 border border-foreground/20 bg-surface/80 backdrop-blur-md"
+      className="fixed inset-x-[30%] mx-6 mt-6 px-2 py-3 hidden rounded-3xl justify-around z-50 border border-foreground/20 bg-surface/80 backdrop-blur-md lg:flex lg:py-2 "
+    >
+      {navItems.map(({ label, href }) => {
+        const isCurrent = activeSection === href.slice(1);
+
+        return (
+          <a
+            key={href}
+            href={href}
+            aria-current={isCurrent ? "location" : undefined}
+            className={`flex flex-col text-sm items-center gap-0.5 py-2 px-6 rounded-full ${isCurrent ? "bg-accent/20 text-accent" : "text-muted hover:text-foreground"}`}
+          >
+            <span>{label}</span>
+          </a>
+        );
+      })}
+    </nav>
+  );
+}
+
+export function MobileNavigation() {
+  return (
+    <nav
+      aria-label="main navigation"
+      className="fixed bottom-3 inset-x-0 mx-6 px-2 py-3 flex rounded-3xl justify-around z-50 border border-foreground/20 bg-surface/80 backdrop-blur-md lg:hidden"
     >
       {navItems.map(({ label, href, icon: Icon }) => (
         <a

@@ -9,8 +9,8 @@ const experiences = [
     role: "Full Stack Developer (Frontend Focused)",
     location: "Remote",
     location_icon: Monitor,
-    start_date: "03/2023",
-    end_date: "08/2026",
+    start_date: "Mar 2023",
+    end_date: "Aug 2026",
     points: [
       "Reduced admin dashboard load time by 83% (~30s to under 5s) by replacing 5 sequential per-student API requests with batched endpoints that fetch data for groups of 20 students in a single request, cutting total request volume by up to 20x.",
       "Built a responsive React and TypeScript admin dashboard from the ground up to monitor activity for 300+ students across multiple educational applications, partnering directly with the CPO to deliver real-time classroom visualizations and reusable analytics components.",
@@ -36,8 +36,8 @@ const experiences = [
     role: "Software Engineer Intern",
     location: "Los Angeles, CA",
     location_icon: MapPin,
-    start_date: "06/2022",
-    end_date: "09/2022",
+    start_date: "Jun 2022",
+    end_date: "Sep 2022",
     points: [
       "Developed backend ETL processes using Spring Batch to automate the aggregation of client account and financial delinquency data from MySQL databases into automated internal reports.",
       "Participated in daily Agile workflows to optimize complex SQL reporting queries, enhancing data processing efficiency for enterprise risk analysis and partner distribution workflows",
@@ -47,7 +47,7 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const [visibleCount, setVisibleCount] = useState<number>(1);
+  const [visibleCount, setVisibleCount] = useState<number>(2);
 
   return (
     <section id="experience" className="content-section">

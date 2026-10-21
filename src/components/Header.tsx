@@ -2,7 +2,6 @@ import { Volume2, VolumeX } from "lucide-react";
 import useRainAudio from "../hooks/useRainAudio";
 import { DesktopNavigation } from "./Navigation";
 
-
 export default function Header() {
   const { isPlaying, toggleAudio } = useRainAudio();
 
@@ -14,7 +13,7 @@ export default function Header() {
         className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-linear-to-b from-background/90 to-transparent"
       />
 
-      <DesktopNavigation/>
+      <DesktopNavigation />
 
       {/* volume slider/toggle button */}
       <button
@@ -24,9 +23,9 @@ export default function Header() {
         onClick={toggleAudio}
       >
         {isPlaying ? (
-          <Volume2 strokeWidth={1.5} size={20} />
+          <Volume2 strokeWidth={1.5} className="size-5 lg:size-8" />
         ) : (
-          <VolumeX strokeWidth={1.5} size={20} />
+          <VolumeX strokeWidth={1.5} className="size-5 lg:size-8" />
         )}
       </button>
     </header>

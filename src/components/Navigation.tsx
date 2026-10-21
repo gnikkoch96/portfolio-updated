@@ -30,7 +30,7 @@ export function DesktopNavigation() {
   return (
     <nav
       aria-label="main navigation"
-      className="fixed inset-x-[30%] mx-6 px-2 py-3 hidden rounded-3xl justify-around z-50 border border-foreground/20 bg-surface/80 backdrop-blur-md lg:flex lg:py-2"
+      className="fixed inset-x-[25%] mx-6 px-2 py-3 hidden rounded-3xl justify-around z-50 border border-foreground/20 bg-surface/80 backdrop-blur-md lg:flex lg:py-2 xl:inset-x-[30%]"
     >
       {navItems.map(({ label, href }) => {
         const isCurrent = activeSection === href.slice(1);

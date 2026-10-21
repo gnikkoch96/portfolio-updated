@@ -53,5 +53,11 @@ html {
 }
 
 @utility content-section {
-  @apply flex flex-col gap-6 pt-15 pb-24 px-6 min-h-dvh snap-start bg-background/90;
+  @apply pt-15 pb-24 lg:pb-0 px-6 min-h-dvh snap-start bg-background/90;
 }
+
+@utility container-content-section{
+  @apply flex flex-col gap-6 w-full max-w-7xl mx-auto
+}
+
+

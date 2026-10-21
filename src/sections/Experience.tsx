@@ -51,79 +51,90 @@ export default function Experience() {
 
   return (
     <section id="experience" className="content-section">
-      {/* experience header */}
-      <SectionHeader
-        sectionTitle="Experience"
-        sectionSubtext="My professional journey and key contributions"
-      />
-
-      <div className="relative flex flex-col gap-5">
-        {/* timeline line */}
-        <div className="absolute top-2 bottom-2 left-0 w-0.5 bg-accent z-10" />
-
-        {/* experience */}
-        {experiences
-          .slice(0, visibleCount)
-          .map(
-            ({
-              company,
-              role,
-              location,
-              location_icon: LocationIcon,
-              start_date,
-              end_date,
-              techs,
-              points,
-            }) => (
-              <div key={company} className="relative flex flex-col gap-2 pl-6">
-                {/* dot (used for the timeline) */}
-                <div className="absolute top-1 left-px -translate-x-1/2 bg-accent w-3 h-3 rounded-full" />
-
-                {/* company info */}
-                <div className="flex flex-col">
-                  {/* date and location*/}
-                  <div className="flex justify-between text-muted">
-                    <p className="text-accent">
-                      {start_date} - {end_date}
-                    </p>
-                    <p className="flex gap-1.5 items-center border border-muted/30 rounded-full py-1 px-2 text-xs bg-surface">
-                      <LocationIcon size={20} strokeWidth={1.5} /> {location}
-                    </p>
+      <div className="container-content-section">
+        {/* experience header */}
+        <SectionHeader
+          sectionTitle="Experience"
+          sectionSubtext="My professional journey and key contributions"
+        />
+        <div className="relative flex flex-col gap-5">
+          {/* timeline line */}
+          <div className="absolute top-2 bottom-2 left-0 w-0.5 bg-accent z-10" />
+          {/* experience */}
+          {experiences
+            .slice(0, visibleCount)
+            .map(
+              ({
+                company,
+                role,
+                location,
+                location_icon: LocationIcon,
+                start_date,
+                end_date,
+                techs,
+                points,
+              }) => (
+                <div
+                  key={company}
+                  className="relative flex flex-col gap-2 pl-6"
+                >
+                  {/* dot (used for the timeline) */}
+                  <div className="absolute top-1 left-px -translate-x-1/2 bg-accent w-3 h-3 rounded-full" />
+                  {/* company info */}
+                  <div className="flex flex-col">
+                    {/* date and location*/}
+                    <div className="flex justify-between text-muted">
+                      <p className="text-accent lg:text-xl">
+                        {start_date} - {end_date}
+                      </p>
+                      <p className="flex gap-1.5 items-center border border-muted/30 rounded-full py-1 px-2 text-xs bg-surface lg:text-lg">
+                        <LocationIcon
+                          className="size-5 lg:size-6"
+                          strokeWidth={1.5}
+                        />{" "}
+                        {location}
+                      </p>
+                    </div>
+                    {/* company name */}
+                    <h3 className="text-xl font-semibold lg:text-3xl">
+                      {company}
+                    </h3>
+                    {/* role */}
+                    <p className="text-mute lg:text-xl">{role}</p>
                   </div>
-                  {/* company name */}
-                  <h3 className="text-xl font-semibold">{company}</h3>
-                  {/* role */}
-                  <p className="text-muted">{role}</p>
-                </div>
-                <div className="py-3 pl-7 pr-3 bg-surface/80 rounded-2xl border border-white/10 flex flex-col gap-3.5">
-                  {/* resume point */}
-                  <ul className="list-disc ">
-                    {points.map((point) => (
-                      <li key={point} className="text-muted text-sm">
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                  {/* tech */}
-                  <div className="flex gap-1 flex-wrap -ml-5">
-                    {techs.map((tech) => (
-                      <TechPill key={tech} tech={tech}/>
-                    ))}
+                  <div className="py-3 pl-7 pr-3 bg-surface/80 rounded-2xl border border-white/10 flex flex-col gap-3.5">
+                    {/* resume point */}
+                    <ul className="list-disc lg:columns-2 lg:gap-x-18 lg:[column-rule:1px_solid_#334155]">
+                      {points.map((point) => (
+                        <li
+                          key={point}
+                          className="text-muted text-sm lg:text-lg"
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                    {/* tech */}
+                    <div className="flex gap-1 flex-wrap -ml-5">
+                      {techs.map((tech) => (
+                        <TechPill key={tech} tech={tech} />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ),
-          )}
+              ),
+            )}
+        </div>
+        {visibleCount < experiences.length ? (
+          <button onClick={() => setVisibleCount((prev) => prev + 1)}>
+            View More
+          </button>
+        ) : (
+          experiences.length > 1 && (
+            <button onClick={() => setVisibleCount(1)}>Show Less</button>
+          )
+        )}
       </div>
-      {visibleCount < experiences.length ? (
-        <button onClick={() => setVisibleCount((prev) => prev + 1)}>
-          View More
-        </button>
-      ) : (
-        experiences.length > 1 && (
-          <button onClick={() => setVisibleCount(1)}>Show Less</button>
-        )
-      )}
     </section>
   );
 }

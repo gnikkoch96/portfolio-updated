@@ -57,7 +57,7 @@ html {
 }
 
 @utility container-content-section{
-  @apply flex flex-col gap-6 w-full max-w-7xl mx-auto
+  @apply flex flex-col gap-6 w-full max-w-[100rem] mx-auto
 }
 
 

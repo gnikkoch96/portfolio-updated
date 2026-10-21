@@ -53,30 +53,33 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section id="projects" className="content-section">
-      {/* projects header */}
-      <SectionHeader
-        sectionTitle="Projects"
-        sectionSubtext="A selection of personal projects that I've built"
-      />
-
-      {/* project cards */}
-      {projects.map((project) => (
-        <ProjectCard key={project.name} project={project} />
-      ))}
-
-      {/* github button */}
-      <a
-        className="flex items-center justify-center gap-3 p-3 rounded-xl bg-accent"
-        target="_blank"
-        href="https://github.com/gnikkoch96"
-      >
-        <img
-          className="h-5.5 bg-white rounded-full"
-          src={githubIcon}
-          alt="Github Icon"
+      <div className="container-content-section">
+        {/* projects header */}
+        <SectionHeader
+          sectionTitle="Projects"
+          sectionSubtext="A selection of personal projects that I've built"
         />
-        Explore More on Github <ArrowRight size={20} />
-      </a>
+        <div className="grid grids-cols-1 gap-6 lg:grid-cols-3">
+          {/* project cards */}
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
+        </div>
+
+        {/* github button */}
+        <a
+          className="flex items-center justify-center gap-3 p-3 rounded-xl bg-accent"
+          target="_blank"
+          href="https://github.com/gnikkoch96"
+        >
+          <img
+            className="h-5.5 bg-white rounded-full"
+            src={githubIcon}
+            alt="Github Icon"
+          />
+          Explore More on Github <ArrowRight size={20} />
+        </a>
+      </div>
     </section>
   );
 }

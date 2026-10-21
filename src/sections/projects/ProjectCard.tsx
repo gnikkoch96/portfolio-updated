@@ -18,19 +18,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col gap-2">
         {/* name and link */}
         <div className="flex justify-between items-center">
-          <h3 className="text-2xl font-bold">{project.name}</h3>
+          <h3 className="text-2xl font-bold lg:text-xl">{project.name}</h3>
           <a className="text-muted" target="blank" href={project.project_url}>
-            <SquareArrowOutUpRight size={25}/>
+            <SquareArrowOutUpRight className="size-6 lg:size-4"/>
           </a>
         </div>
         {/* desc */}
-        <p className="text-muted">{project.desc}</p>
+        <p className="text-muted lg:text-md">{project.desc}</p>
       </div>
 
       {/* tech */}
       <div className="flex flex-wrap">
         {project.techs.map((tech) => (
-          <TechPill key={tech} tech={tech} />
+          <TechPill key={tech} tech={tech}/>
         ))}
       </div>
     </div>

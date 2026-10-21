@@ -117,7 +117,7 @@ export default function Experience() {
                     {/* tech */}
                     <div className="flex gap-1 flex-wrap -ml-5">
                       {techs.map((tech) => (
-                        <TechPill key={tech} tech={tech} />
+                        <TechPill key={tech} tech={tech} className="lg:text-lg"/>
                       ))}
                     </div>
                   </div>

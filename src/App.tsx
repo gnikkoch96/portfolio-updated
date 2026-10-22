@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Home from "./sections/Home";
 import Projects from "./sections/projects/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       </div>
 
       <MobileNavigation />
+
+      <Footer/>
     </main>
   );
 }

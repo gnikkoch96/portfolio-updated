@@ -25,28 +25,48 @@ export default function About() {
     <section id="about" className="content-section">
       <div className="container-content-section">
         <SectionHeader sectionTitle="About" sectionSubtext="" />
-        <p className="text-muted whitespace-pre-line lg:text-xl">{aboutMeText}</p>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="flex flex-col gap-6">
+            {/* about me text */}
+            <p className="text-muted whitespace-pre-line lg:text-xl">
+              {aboutMeText}
+            </p>
 
-        {/* what I enjoy */}
-        <h3 className="text-2xl font-bold text-muted lg:text-3xl">Other Hobbies</h3>
-        <div className="flex flex-wrap gap-2">
-          {hobbies.map(({ name, icon: Icon }) => (
-            <span
-              key={name}
-              className="flex gap-2 border border-muted/30  bg-background p-2 rounded-2xl text-sm lg:text-lg"
+            {/* what I enjoy */}
+            <h3 className="text-2xl font-bold text-muted lg:text-3xl">
+              Other Hobbies
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {hobbies.map(({ name, icon: Icon }) => (
+                <span
+                  key={name}
+                  className="flex gap-2 border border-muted/30  bg-background p-2 rounded-2xl text-sm lg:text-lg"
+                >
+                  <Icon className="text-accent" /> {name}
+                </span>
+              ))}
+            </div>
+          </div>
+          {/* profile image */}
+          <div className="flex flex-col gap-6 items-center lg:justify-center">
+            <img
+              src={profileImage}
+              alt="profile image"
+              loading="lazy"
+              className="size-30 rounded-full border border-muted/30 lg:size-70"
+            />
+
+            {/* hire me button */}
+            <a
+              href="mailto:nikkochdev@gmail.com"
+              className="relative isolate w-fit mx-auto rounded-xl bg-accent px-3 py-1
+             before:absolute before:inset-0 before:-z-10 before:rounded-xl
+             before:bg-accent/70 before:blur-lg before:animate-ping
+             motion-reduce:before:animate-none lg:text-2xl lg:px-5 lg:py-2"
             >
-              <Icon className="text-accent" /> {name}
-            </span>
-          ))}
-        </div>
-        {/* profile image */}
-        <div className="flex justify-center">
-          <img
-            src={profileImage}
-            alt="profile image"
-            loading="lazy"
-            className="size-30 rounded-full border border-muted/30 lg:size-50"
-          />
+              Hire me!
+            </a>
+          </div>
         </div>
       </div>
     </section>

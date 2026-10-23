@@ -14,7 +14,7 @@ export default function Header({ activeSection }: HeaderProps) {
       {/* Extended gradient */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-linear-to-b from-background/90 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-linear-to-b from-background/90 to-transparent"
       />
 
       <DesktopNavigation activeSection={activeSection}/>

@@ -23,7 +23,7 @@ function App() {
         <About/>
       </div>
 
-      <MobileNavigation />
+      <MobileNavigation activeSection={activeSection}/>
 
       <Footer/>
     </main>

@@ -12,7 +12,7 @@ export default function Background() {
 
       {/* Animated rain layer */}
       <div className="rain-window rain-window-left" aria-hidden="true">
-        {Array.from({ length: 10 }, (_, i) => (
+        {Array.from({ length: 25 }, (_, i) => (
           <div
             key={i}
             className="rain-drop"

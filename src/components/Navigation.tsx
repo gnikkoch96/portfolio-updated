@@ -1,6 +1,5 @@
 import { Briefcase, FolderOpen, Home, User } from "lucide-react";
-import { useState, useEffect } from "react";
-
+0
 const navItems = [
   { label: "Home", href: "#home", icon: Home },
   { label: "Experience", href: "#experience", icon: Briefcase },
@@ -8,25 +7,7 @@ const navItems = [
   { label: "About", href: "#about", icon: User },
 ];
 
-export function DesktopNavigation() {
-  const [activeSection, setActiveSection] = useState<String>("home");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
-        if (visible) setActiveSection(visible.target.id);
-      },
-      { rootMargin: "-30% 0px -60% 0px" },
-    );
-
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
+export function DesktopNavigation({activeSection}:{activeSection: string}) {
   return (
     <nav
       aria-label="main navigation"

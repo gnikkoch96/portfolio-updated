@@ -6,12 +6,15 @@ import Experience from "./sections/Experience";
 import Home from "./sections/Home";
 import Projects from "./sections/projects/Projects";
 import Footer from "./components/Footer";
+import useActiveSection from "./hooks/useActiveSection";
 
 function App() {
+  const {activeSection} = useActiveSection();
+
   return (
     <main className="min-h-screen text-white">
       <Background />
-      <Header />
+      <Header activeSection={activeSection}/>
 
       <div>
         <Home />

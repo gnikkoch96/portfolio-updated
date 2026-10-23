@@ -25,7 +25,7 @@ export default function Background() {
         ))}
       </div>
       <div className="rain-window rain-window-right" aria-hidden="true">
-        {Array.from({ length: 10 }, (_, i) => (
+        {Array.from({ length: 25 }, (_, i) => (
           <div
             key={i}
             className="rain-drop"

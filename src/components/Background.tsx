@@ -19,7 +19,7 @@ export default function Background() {
             style={{
               left: `${i * 10}%`,
               animationDuration: `${1 + (i % 4) * 0.5}s`,
-              animationDelay: `${-i * 0.3}s`,
+              animationDelay: `${0.3 + i * 0.1}s`,
             }}
           />
         ))}
@@ -32,7 +32,7 @@ export default function Background() {
             style={{
               left: `${i * 10}%`,
               animationDuration: `${1 + (i % 4) * 0.5}s`,
-              animationDelay: `${-i * 0.3}s`,
+              animationDelay: `${0.35 + i * 0.1}s`,
             }}
           />
         ))}

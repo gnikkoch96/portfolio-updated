@@ -40,15 +40,26 @@ html {
   background: rgba(54, 101, 181, 0.7);
   border-radius: 999px;
   animation: slide-down 0.5s linear infinite;
+  animation-fill-mode: backwards;
 }
 
 @keyframes slide-down {
   from {
     transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
   }
 
   to {
     transform: translateY(100dvh);
+    opacity: 0;
   }
 }
 
